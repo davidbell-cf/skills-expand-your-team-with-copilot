@@ -307,6 +307,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${details.participants.length}/${details.max_participants} enrolled`;
   }
 
+  function getCalendarEnrollmentLabel(details) {
+    return `${details.participants.length}/${details.max_participants}`;
+  }
+
   function timeToMinutes(time24) {
     const [hours, minutes] = time24.split(":").map((num) => parseInt(num));
     return hours * 60 + minutes;
@@ -692,7 +696,7 @@ document.addEventListener("DOMContentLoaded", () => {
         eventCard.appendChild(title);
 
         const enrollment = document.createElement("span");
-        enrollment.textContent = getEnrollmentSummary(event.details);
+        enrollment.textContent = getCalendarEnrollmentLabel(event.details);
         eventCard.appendChild(enrollment);
 
         const tooltip = document.createElement("span");
