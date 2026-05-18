@@ -103,6 +103,27 @@
 
           <!-- Activities Content -->
           <div class="activities-content">
+            <div class="activities-toolbar">
+              <h3>Activities</h3>
+              <div class="view-toggle" role="group" aria-label="View toggle">
+                <button
+                  id="card-view-button"
+                  class="view-toggle-button active"
+                  data-view="card"
+                  aria-pressed="true"
+                >
+                  Card View
+                </button>
+                <button
+                  id="calendar-view-button"
+                  class="view-toggle-button"
+                  data-view="calendar"
+                  aria-pressed="false"
+                >
+                  Calendar View
+                </button>
+              </div>
+            </div>
             <div id="activities-list">
               <!-- Activities will be loaded here -->
               <p>Loading activities...</p>
